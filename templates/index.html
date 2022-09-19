@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" >
+  </head>
+  <body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#up').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/go_up',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#down').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/go_down',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#left').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/go_left',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#right').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/go_right',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+
+<div class='container'>
+  <h3>Test</h3>
+    
+      <form>
+        <style>
+          body
+          { text-align: center;}	</style>
+
+        <div style="text-align:center;width:480px;">
+          <button onclick="moveup()">UP</button><br><br>
+          <button onclick="moveleft()">LEFT</button>
+          <button onclick="moveright()">RIGHT</button><br><br>
+          <button onclick="movedown()">DOWN</button>
+        </div>
+          <div class="grid">
+              <div class="square">
+                <a href="#/Action1" class="button" onclick="moveup()">Action1</a>
+                <!-- <button>Apple</button>
+                <button>Samsung</button>
+                <button>Sony</button> -->
+              </div>
+          </div>
+          <a href=# id=test><button class='btn btn-default'>Test</button></a>
+          <a href=# id=up><button class='btn btn-default'>Up</button></a>
+          <a href=# id=down><button class='btn btn-default'>down</button></a>
+          <a href=# id=left><button class='btn btn-default'>left</button></a>
+          <a href=# id=right><button class='btn btn-default'>right</button></a>
+          <img src="{{ url_for('video_feed') }}">
+      </form>
+
+</div>
+</body>
+</html>

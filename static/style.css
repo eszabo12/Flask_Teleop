@@ -1,0 +1,34 @@
+.button-container {
+  width: 520px;
+  background: gray;
+  overflow-y: auto;
+}
+
+canvas {
+  border:1px solid #d3d3d3;
+  background-color: #f1f1f1;
+}
+
+.button-container > a {
+  width: 100px;
+  height: 100px;
+  float: left;
+  background: lightgray;   
+  margin: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+} 
+
+.square {
+  aspect-ratio: 1/ 1;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  background-color: #1E1E1E;
+  color: #fff;
+  
+} 
