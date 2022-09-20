@@ -1,0 +1,1 @@
+[Unit] Description=My Python App After=multi-user.target [Service] ExecStart=/usr/bin/python3 /home/elle/elle_ws/Flask_Teleop/app.py Type=idle [Install] WantedBy=multi-user.target

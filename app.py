@@ -31,14 +31,6 @@ def go_right():
     print("go right")
     return "nothing"
 
-# @app.route('/my_action2')
-# def go_down():
-#   return
-
-# @app.route('/my_action3')
-# def go_right():
-#   return
-
 @app.route('/')
 def index():
     """Video streaming home page."""
